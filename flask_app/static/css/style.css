@@ -1,0 +1,42 @@
+body {
+    background-color: #ff66ff;
+}
+
+.container, .contain, #add {
+    display: flex;
+    justify-content: space-around;
+    color: #ffff99;
+}
+.container {
+    flex-direction: column;
+}
+
+.left, .right, table {
+    background-color:  #ffff99;
+    padding: 30px;
+}
+.left, .right, table, th, td, .white {
+    color: #ff66ff;
+    }
+.nav, #space, #end {
+    display: flex;
+}
+.nav, #space {
+    justify-content: space-between; 
+}
+#end {
+    justify-content: flex-end;
+}
+.red {
+    color: red;
+}
+#border {
+    border: 4px solid #ffff99;
+}
+#TV {
+    margin-left: 150px;
+}
+#like {
+    color: blue;
+    margin-right: 50px;
+}

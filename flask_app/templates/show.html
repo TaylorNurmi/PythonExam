@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>TV Shows</title>
+</head>
+<body>
+    <div class="container" style="flex-direction: column;">
+        <div id="end">
+            <a href="/shows">TV Shows</a>
+            <a href="/logout">Logout</a>
+        </div>
+        <div id="border">
+            <div id="space">
+                <h1>{{ shows.title }}</h1>
+                <p id="like">Liked by: {{ count }}</p>
+            </div>
+            <p>Network: {{ shows.network }}</p>
+            <p>Release Date: {{ shows.release_date }}</p>
+            <p>Description: {{ shows.description }}</p>
+            {% for user in users %}
+                {% if user.id == shows.user_id %}
+                    <p>Posted by: {{ user.first_name }}  {{ user.last_name }}</p>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
